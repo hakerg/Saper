@@ -1,0 +1,27 @@
+pierwszy ruch: środek planszy
+
+dla komórki A:
+	jeśli A to liczba:
+		jeśli liczba = sąsiednie flagi: odkryj sąsiednie pola
+		jeśli liczba = sąsiednie flagi + sąsiednie nieznane pola: oflaguj sąsiednie pola
+		dla sąsiednich komórek B (w pionie i poziomie):
+			jeśli B to liczba:
+				jeśli liczba nieznanych sąsiadów B i nie sąsiadów A = liczba B - sąsiednie flagi B - (liczba A - sąsiednie flagi A): oflaguj sąsiadów B nie sąsiadujących z A i odkryj sąsiadów A nie sąsiadujących z B
+
+jeśli brak ruchu: kliknij pole z najmniejszym średnim prawdopodobieństwem miny
+
+??-??X???
+111122222
+   ^^
+   AB
+
+
+left cell:
+	digit = 1
+	undiscovered = 3
+right cell:
+	digit = 2
+	undiscovered = 3
+	new undiscovered neighbors = 1
+	lost undiscovered neighbors = 1
+common cells = 2
